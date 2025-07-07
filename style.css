@@ -1,49 +1,102 @@
 body {
-	min-height: 100vh;
+	background-color: #161515;
+}
+.wrapper {
+	width: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background: #e3f2fd;
+}
+.headerBox {
+	display: flex;
+	width: 95%;
+	height: 50px;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid gray;
+}
+.headerBox .title {
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+.headerBox .iconBox {
+	display: flex;
+	align-items: center;
+}
+.linkBox {
+	height: 100%;
+}
+.linkBox li a {
+	text-decoration: none;
+	color: #8e8e8e;
+	font-size: 18px;
+	margin: 0 10px;
+}
+.linkBox li {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.linkBox ul {
 	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	align-items: center;
 }
 
-.card {
-	width: 600px;
-	background: #6da1b4;
-	border-radius: 10px;
-	margin: 20px auto;
-	padding: 20px;
-	box-sizing: border-box;
-	box-shadow: 0 2px 8px #0001;
-	text-align: center;
-	font-family: "Noto Sans TC", Arial, sans-serif;
+.linkBox li:hover {
+	background-color:#1B191A;
 }
-.avatar {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	object-fit: cover;
-	display: block;
-	margin: 0 auto 24px auto;
-	border: 3px solid #90caf9;
+.linkBox li:hover a {
+	color: white;
 }
-.name {
-	font-size: 20px;
-	font-weight: bold;
-	margin-bottom: 4px;
+
+.searchTextBox .searchText {
+	color: #8e8e8e;
 }
-.title {
-	font-size: 36px;
-	color: #0058af;
-	margin-bottom: 24px;
+
+.contentBox{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
-.line {
-	border: none;
-	border-top: 1px solid #90caf9;
-	margin: 24px 0;
+
+.contentBox .titleBox{
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	margin-top: 30px;
 }
-.desc {
-	font-size: 24px;
-	color: #1c1c1c;
-	line-height: 1.6;
+.contentBox .titleBox .titleTextBox {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.contentBox .titleBox h1 {
+	font-size: 42px;
+	margin: 20px 0;
+}
+.contentBox .imageBox {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.contentBox .imageBox img{
+	width: 30%;
+	height: auto;
 }

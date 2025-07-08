@@ -51,7 +51,7 @@ body {
 }
 
 .linkBox li:hover {
-	background-color:#1B191A;
+	background-color: #1b191a;
 }
 .linkBox li:hover a {
 	color: white;
@@ -61,7 +61,7 @@ body {
 	color: #8e8e8e;
 }
 
-.contentBox{
+.contentBox {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -69,7 +69,7 @@ body {
 	justify-content: center;
 }
 
-.contentBox .titleBox{
+.contentBox .titleBox {
 	width: 95%;
 	display: flex;
 	flex-direction: column;
@@ -87,7 +87,7 @@ body {
 }
 
 .contentBox .titleBox h1 {
-	font-size: 42px;
+	font-size: 48px;
 	margin: 20px 0;
 }
 .contentBox .imageBox {
@@ -96,7 +96,101 @@ body {
 	justify-content: space-between;
 	align-items: center;
 }
-.contentBox .imageBox img{
+.contentBox .imageBox img {
 	width: 30%;
 	height: auto;
+}
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.loader {
+	width: 50px;
+	height: 50px;
+	border: 5px solid #ccc;
+	border-top-color: #2196f3;
+	border-radius: 50%;
+	animation: spin 0.8s ease-in-out infinite;
+	margin: 50px auto;
+}
+@media (max-width: 768px) {
+	.headerBox {
+		flex-direction: column;
+		height: auto;
+		align-items: flex-start;
+		padding: 10px 0;
+	}
+	.linkBox {
+		width: 100%;
+	}
+	.linkBox ul {
+		flex-direction: column;
+		width: 100%;
+		align-items: flex-start;
+	}
+	.linkBox li {
+		width: 100%;
+		justify-content: flex-start;
+		padding: 8px 0;
+	}
+	.linkBox li a {
+		display: block;
+		width: 100%;
+		margin: 0;
+		padding-left: 20px;
+	}
+	.contentBox .imageBox {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+	}
+	.contentBox .imageBox img {
+		width: 90vw;
+		max-width: 350px;
+		height: auto;
+	}
+}
+.squareBox {
+	position: relative;
+	width: 100%;
+	height: 120px;
+	margin-top: 40px;
+	overflow: hidden;
+}
+@keyframes moveColorScale {
+	0% {
+		left: 0;
+		background: red;
+		transform: scale(1);
+	}
+	25% {
+		background: yellow;
+		transform: scale(1.3);
+	}
+	50% {
+		background: blue;
+		transform: scale(1.6);
+	}
+	75% {
+		background: yellow;
+		transform: scale(1.3);
+	}
+	100% {
+		left: calc(100% - 50px);
+		background: red;
+		transform: scale(1);
+	}
+}
+.animatedSquare {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	border-radius: 12px;
+	background: red;
+	animation: moveColorScale 3s linear infinite alternate;
 }

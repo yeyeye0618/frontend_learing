@@ -1,196 +1,120 @@
 body {
-	background-color: #161515;
-}
-.wrapper {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-.headerBox {
-	display: flex;
-	width: 95%;
-	height: 50px;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 1px solid gray;
-}
-.headerBox .title {
-	color: white;
-	font-size: 18px;
-	font-weight: bold;
-}
-.headerBox .iconBox {
-	display: flex;
-	align-items: center;
-}
-.linkBox {
-	height: 100%;
-}
-.linkBox li a {
-	text-decoration: none;
-	color: #8e8e8e;
-	font-size: 18px;
-	margin: 0 10px;
-}
-.linkBox li {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.linkBox ul {
+	background: #fff;
+	min-height: 100vh;
 	margin: 0;
-	padding: 0;
+	font-family: "Segoe UI", "Noto Sans TC", Arial, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.todoContainer {
+	background: #b3dceb;
+	border-radius: 60px;
+	padding: 60px 40px 40px 40px;
+	box-shadow: 0 4px 24px #0002;
+	min-width: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.todoTitle {
+	font-size: 72px;
+	font-weight: bold;
+	margin: 0 0 40px 0;
+	color: #111;
+	letter-spacing: 2px;
+}
+.todoRow {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 32px;
+	width: 100%;
+}
+.todoInput {
+	width: 350px;
+	height: 40px;
+	border-radius: 8px;
+	border: none;
+	font-size: 22px;
+	padding: 0 16px;
+	margin-right: 12px;
+	outline: none;
+}
+.todoAdd {
+	background: #4caf50;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	font-size: 18px;
+	padding: 0 18px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.2s;
+}
+.todoAdd:hover {
+	background: #388e3c;
+}
+.todoList {
 	list-style: none;
-	display: flex;
-	height: 100%;
-	width: 100%;
-	align-items: center;
-}
-
-.linkBox li:hover {
-	background-color: #1b191a;
-}
-.linkBox li:hover a {
-	color: white;
-}
-
-.searchTextBox .searchText {
-	color: #8e8e8e;
-}
-
-.contentBox {
+	padding: 0;
+	margin: 0;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 }
-
-.contentBox .titleBox {
-	width: 95%;
+.todoItem {
+	background: #fff;
+	border-radius: 6px;
 	display: flex;
-	flex-direction: column;
-	gap: 20px;
 	align-items: center;
-	justify-content: center;
-	color: white;
-	margin-top: 30px;
+	padding: 12px 16px;
+	margin-bottom: 12px;
+	width: 600px;
+	box-sizing: border-box;
+	font-size: 22px;
+	box-shadow: 0 2px 8px #0001;
 }
-.contentBox .titleBox .titleTextBox {
-	width: 40%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+.todoCheckbox {
+	margin-right: 10px;
+	font-size: 22px;
+	width: 28px;
+	height: 28px;
+	accent-color: #4caf50;
 }
-
-.contentBox .titleBox h1 {
-	font-size: 48px;
-	margin: 20px 0;
+.todoText {
+	flex: 1;
 }
-.contentBox .imageBox {
-	width: 95%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.todoDelete {
+	background: #f44336;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	font-size: 18px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.2s;
 }
-.contentBox .imageBox img {
-	width: 30%;
-	height: auto;
+.todoDelete:hover {
+	background: #b71c1c;
 }
-@keyframes spin {
-	to {
-		transform: rotate(360deg);
+@media (max-width: 700px) {
+	.todoContainer {
+		min-width: 90vw;
+		padding: 30px 10px 20px 10px;
+		border-radius: 30px;
 	}
-}
-
-.loader {
-	width: 50px;
-	height: 50px;
-	border: 5px solid #ccc;
-	border-top-color: #2196f3;
-	border-radius: 50%;
-	animation: spin 0.8s ease-in-out infinite;
-	margin: 50px auto;
-}
-@media (max-width: 768px) {
-	.headerBox {
-		flex-direction: column;
-		height: auto;
-		align-items: flex-start;
-		padding: 10px 0;
+	.todoTitle {
+		font-size: 36px;
 	}
-	.linkBox {
-		width: 100%;
+	.todoInput {
+		width: 60vw;
+		font-size: 18px;
 	}
-	.linkBox ul {
-		flex-direction: column;
-		width: 100%;
-		align-items: flex-start;
-	}
-	.linkBox li {
-		width: 100%;
-		justify-content: flex-start;
-		padding: 8px 0;
-	}
-	.linkBox li a {
-		display: block;
-		width: 100%;
-		margin: 0;
-		padding-left: 20px;
-	}
-	.contentBox .imageBox {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 12px;
-	}
-	.contentBox .imageBox img {
+	.todoItem {
 		width: 90vw;
-		max-width: 350px;
-		height: auto;
+		font-size: 18px;
 	}
-}
-.squareBox {
-	position: relative;
-	width: 100%;
-	height: 120px;
-	margin-top: 40px;
-	overflow: hidden;
-}
-@keyframes moveColorScale {
-	0% {
-		left: 0;
-		background: red;
-		transform: scale(1);
-	}
-	25% {
-		background: yellow;
-		transform: scale(1.3);
-	}
-	50% {
-		background: blue;
-		transform: scale(1.6);
-	}
-	75% {
-		background: yellow;
-		transform: scale(1.3);
-	}
-	100% {
-		left: calc(100% - 50px);
-		background: red;
-		transform: scale(1);
-	}
-}
-.animatedSquare {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 50px;
-	height: 50px;
-	border-radius: 12px;
-	background: red;
-	animation: moveColorScale 3s linear infinite alternate;
 }

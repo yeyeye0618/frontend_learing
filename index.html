@@ -1,54 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="new website copy by ye">
-    <meta property="og:description" content="new website copy by Ye">
-    <meta property="og:image" content="https://i.pinimg.com/736x/a9/8a/d3/a98ad31b4947ed09d9e3e9918cf3379b.jpg">
-    <title>ye's copy</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My ToDo List</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "wrapper">
-		<div class="headerBox">
-			<div class="iconBox">
-				<img src="https://onepagelove.com/wp-content/themes/onepagelove/frontend/img/favicon/favicon-32x32.png"/>
-				<h2 class="title">One Page Love</h2>
-			</div>
-			<div class="linkBox">
-				<ul>
-					<li><a href="" class="headerLink">inspiration</a></li>
-					<li><a href="" class="headerLink">Template</a></li>
-					<li><a href="" class="headerLink">Resources</a></li>
-					<li><a href="" class="headerLink">Info</a></li>
-					<li><a href="" class="headerLink">Hire</a></li>
-					<li><a href="" class="headerLink">Build a One Pager</a></li>
-				</ul>
-			</div>
-			<div class="searchTextBox">
-				<p class="searchText">Search</p>
-			</div>
-		</div>
-		<div class="contentBox">
-			<div class="titleBox">
-				<div class="titleTextBox">
-					<h1>One Page websites, curated.</h1>
-					<p>Since 2008, we've curated 8705 One Pagers. Learn more, submit yours or browse our latest, hand-picked inspiration:</p>
-				</div>
-			</div>
-			<div class="imageBox">
-				<img src="https://i.pinimg.com/736x/a9/8a/d3/a98ad31b4947ed09d9e3e9918cf3379b.jpg" alt="One Page Love Image"/>
-				<img src="https://i.pinimg.com/736x/a9/8a/d3/a98ad31b4947ed09d9e3e9918cf3379b.jpg" alt="One Page Love Image"/>
-				<img src="https://i.pinimg.com/736x/a9/8a/d3/a98ad31b4947ed09d9e3e9918cf3379b.jpg" alt="One Page Love Image"/>
-			</div>
-		</div>
-		<div class="squareBox">
-			  <div class="animatedSquare"></div>
-		</div>
-		<div class="loaderBox">
-			<img class="loader"/>
-		</div>
-	</div>
+  <div class="todoContainer">
+    <h1 class="todoTitle">My ToDo List</h1>
+    <div class="todoRow">
+      <input type="text" class="todoInput" placeholder="what to do">
+      <button class="todoAdd">ADD</button>
+    </div>
+    <ul class="todoList"></ul>
+  </div>
+  <script src="js.js"></script>
 </body>
 </html>
